@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Student Form</title>
+</head>
+<body>
+    <main class="container">
+        <section class="formCard">
+            <form>
+                
+                <figure class="formGroup">
+                    <label>Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                </figure>
+                
+                <figure class="formGroup">
+                    <label>Program</label>
+                    <textarea rows="10" id="program" placeholder="Type your program here..."></textarea>
+                </figure>
+
+                <figure class="formGroup">
+                    <label>Year</label>
+                    <input type="text" id="year" placeholder="Enter your year level">
+                </figure>
+
+                <button type="submit" class="btn">+ Add Student</button>
+            </form>
+        </section>
+
+        <section class="dataContent"></section>
+
+        <h1 id="total">Total Students:</h1>
+    </main>
+</body>
+</html>

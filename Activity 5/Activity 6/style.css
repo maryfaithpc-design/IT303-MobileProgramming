@@ -1,0 +1,114 @@
+html, body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #ffeaf4);
+    margin: 0;
+    padding:0;
+    align-items: center;
+    width: 100%;
+    height: 100vh; 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif, system-ui;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 20px;
+    align-items: start;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+
+}
+
+.formCard {
+    grid-column: span 3;
+    background:white;
+    padding: 30px;
+    border: 2px solid #fff0f5;
+    border-radius: 15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.dataContent {
+    grid-column: span 5;
+    padding: 20px;
+    background: linear-gradient(to bottom, black, #e6008e);
+    border-radius: 15px;
+    
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+
+.formGroup label {
+    color: white;
+    font-weight: bold;
+}
+
+.formGroup input, textarea {
+    width: 100%;
+    border: 1px solid #ffb6c1;
+    padding: 8px;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif, system-ui;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.btn {
+    width: 150px;
+    padding: 12px;
+    background: #ff69b4;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 0;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+
+.btn:hover {
+    background-color: #c9c9c9;
+}
+
+.item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+
+    grid-column: span 2;
+    word-wrap: break-word;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.item h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+    color: #d63384;
+}
+
+.item p {
+    font-size: 13px;
+}
