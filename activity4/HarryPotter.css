@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Libre+Baskerville&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;
+}
+
+.hp-container {
+  padding: 60px 20px;
+  background: #2b1d0e;
+  min-height: auto;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+  box-sizing: border-box;
+  font-family: 'Libre Baskerville', serif;
+  text-align: center;
+  color: #f5deb3;
+}
+
+.hp-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.hp-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #d4af37;
+  margin: 10px auto 40px;
+  border-radius: 2px;
+}
+
+.search-box {
+  margin-bottom: 50px;
+}
+
+.search-box input {
+  width: 90%;
+  max-width: 420px;
+  padding: 14px 24px;
+  border-radius: 25px;
+  border: 1px solid #c19a6b;
+  background: #f5deb3;
+  color: #2b1d0e;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.search-box input:focus {
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card {
+  background: #f5deb3;
+  color: #2b1d0e;
+  border: 2px solid #c19a6b;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.3s;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://www.transparenttextures.com/patterns/aged-paper.png");
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+}
+
+.card-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.card-body {
+  padding: 18px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.card-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+}
+
+.label {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.value {
+  font-weight: bold;
+}
+
+.value.gryffindor { color: #8b0000; }
+.value.slytherin { color: #1e5631; }
+.value.hufflepuff { color: #b8860b; }
+.value.ravenclaw { color: #1c3d5a; }
+
+.loading-text {
+  margin-top: 100px;
+  color: #d4af37;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  padding: 8px 20px;
+  background-color: #64748b;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(100, 116, 139, 0.15);
+  z-index: 10;
+}
+
+.back-btn:hover {
+  background-color: #475569;
+  box-shadow: 0 3px 8px rgba(100, 116, 139, 0.2);
+}
+
+@media (max-width: 480px) {
+  .hp-title {
+    font-size: 2.2rem;
+  }
+  .card-body {
+    padding: 16px;
+  }
+  .back-btn {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+@media (orientation: landscape) {
+  .hp-container {
+    min-height: 100vh;
+    height: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
